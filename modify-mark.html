@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>修改备注</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<style type="text/css">
+			.save{
+				font-size: 16px !important;
+			}
+			input{
+				margin: 10px 0;
+				border: none !important;
+				outline: 0 none !important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <a class=" mui-icon mui-pull-right save">保存</a>
+		    <h1 class="mui-title">修改备注</h1>
+		</header>
+		<div class="mui-content">
+			<input type="text" name="" id="val" value="" placeholder="修改备注"/>
+		</div>
+		<script type="text/javascript" src="js/mui.min.js"></script>
+		
+		<script type="text/javascript">
+			mui.init();
+			mui('.save')[0].addEventListener('tap',function(){
+				var value=mui('#val')[0].value;
+				console.log(value);
+				localStorage.setItem('mark',value);
+				window.history.back();
+			},false)
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,29 @@
+body { background: #fff; }
+
+.mui-content { height: 100%; background: #fff; padding: 0 25px 10px; }
+
+.logo { padding: 30px 35px 35px; }
+.logo dt { width: 60px; height: 60px; margin-bottom: 15px; }
+.logo dd { color: #fe6246; font-size: 16px; }
+
+.mui-input-group:before { height: 0; }
+
+.mui-input-row { margin-bottom: 15px; position: relative; }
+.mui-input-row .check-code { width: 100px; position: absolute; right: 0; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); height: 20px; text-align: center; border-left: 1px solid #fe6246; font-size: 14px; color: #333; }
+.mui-input-row label { padding: 0; width: 50px; height: 100%; position: relative; padding-left: 15px; }
+.mui-input-row label img { width: 20px; height: 20px; }
+.mui-input-row label:after { content: ""; width: 1px; height: 20px; position: absolute; background: #fe6246; right: 0; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); }
+.mui-input-row input { font-size: 16px; width: 75% !important; }
+
+.check .mui-icon-clear { right: 120px !important; }
+
+.mui-input-group:after { height: 0; }
+
+.mui-input-group .mui-input-row:after { background: #fe6246; }
+
+.xieyi { padding: 0 15px; }
+.xieyi em { display: inline-block; width: 15px; height: 15px; border: 1px solid #999; border-radius: 50%; margin-right: 5px; }
+.xieyi .active { background: url(../img/yuan.png) no-repeat center center; background-size: 15px 15px; border: none; }
+.xieyi a { color: #fe6246; }
+
+.login-btn { width: 100%; height: 40px; margin-top: 40px; border: none; box-shadow: none; background: #fe6246; font-size: 16px; }

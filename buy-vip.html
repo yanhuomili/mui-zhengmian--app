@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>购买vip</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/buy-vip.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <a class="mui-btn  mui-pull-right del">取消</a>
+
+		    <h1 class="mui-title">购买vip</h1>
+		    
+		</header>
+		
+		<div class="mui-content">
+			<div class="card-box row-c">
+				<div class="card">
+					<h3>VIP会员</h3>
+					<p>NO.<span class="number">123456</span></p>
+				</div>
+			</div>
+			
+			<ul class="mui-table-view list">
+		        <li class="mui-table-view-cell">
+		           <dl class="row-lr">
+			           	<dt>
+			           		<p class="p1">连续包月VIP会员</p>
+			           		<p class="p2">自动续费，可随时取消</p>
+			           	</dt>
+			           	<dd>
+			           		￥ <i class="price">15</i>
+			           	</dd>
+		           </dl>
+		        </li>
+		        <li class="mui-table-view-cell">
+		           <dl class="row-lr">
+			           	<dt>
+			           		<p class="p1">年费VIP会员</p>
+			           		<p class="p2">12个月会员</p>
+			           	</dt>
+			           	<dd>
+			           		￥ <i class="price">198</i>
+			           	</dd>
+		           </dl>
+		        </li>
+		        <li class="mui-table-view-cell">
+		           <dl class="row-lr active">
+			           	<dt>
+			           		<p class="p1">季度VIP会员</p>
+			           		<p class="p2">3个月会员</p>
+			           	</dt>
+			           	<dd>
+			           		￥ <i class="price">56</i>
+			           	</dd>
+		           </dl>
+		        </li>
+		        <li class="mui-table-view-cell">
+		           <dl class="row-lr">
+			           	<dt>
+			           		<p class="p1">月度VIP会员</p>
+			           		<p class="p2">一个月会员</p>
+			           	</dt>
+			           	<dd>
+			           		￥ <i class="price">20</i>
+			           	</dd>
+		           </dl>
+		        </li>
+		    </ul>
+			<div class="pay">
+				<p>付款方式</p>
+				<dl class="style row-lr">
+					<dt class="row-l">
+						<i><img src="img/p-pay.png"/></i>
+						<span>支付宝</span>
+					</dt>
+					<dd class="active"></dd>
+				</dl>
+				<dl class="style row-lr">
+					<dt class="row-l">
+						<i><img src="img/p-weixin.png"/></i>
+						<span>微信</span>
+					</dt>
+					<dd class=""></dd>
+				</dl>
+			</div>    
+			    
+			<dl class="row-lr footer">
+				<dt class="row-lr">
+					<i>总计</i><em>&yen;</em><span class="rmb">56.05835</span>
+				</dt>
+				<dd class="sure-pay">确认支付</dd>
+			</dl>
+			
+		</div>
+		<script type="text/javascript" src="js/mui.min.js"></script>
+		
+		<script type="text/javascript">
+			mui.init();
+			//确认支付
+			mui('.pay').on('tap','.style',function(){
+				this.lastElementChild.className="active";
+				var siblings=this.nextElementSibling?this.nextElementSibling:this.previousElementSibling;
+				siblings.lastElementChild.className="";
+				console.log(this.innerText);
+			})
+			
+			
+			//价钱取两位小数
+			var num=mui('.rmb')[0].innerText-0;
+			num=num.toFixed(2);//num必须是数字对象
+			mui('.rmb')[0].innerText=num;
+			//确认付款
+			mui('.sure-pay')[0].addEventListener('tap',function(){
+				console.log('确认支付');
+			},false)
+			
+			
+			//会员类型
+			mui('.list').on('tap','li',function(){
+				
+				var child=this.parentNode.children;
+				for(var i=0;i<child.length;i++){
+					child[i].firstElementChild.className='row-lr';
+				}
+				this.firstElementChild.className="row-lr active";
+			})
+			
+			//取消
+			mui('.del')[0].addEventListener('tap',function(){
+				el=mui('.active');
+				console.log(el)
+				for(var i=0;i<el.length;i++){
+					var name=el[i].className
+					name=name.split(" ");
+					name.remove('active');
+					name=name.join(' ');
+					el[i].className=name;
+					console.log(el[i],name);
+				}
+			})
+			
+			Array.prototype.indexOf = function(val) {
+				for (var i = 0; i < this.length; i++) {
+					if (this[i] == val) return i;
+				}
+				return -1;
+			};
+			
+			//js数组原型添加删除方法
+			Array.prototype.remove = function(val) {
+				var index = this.indexOf(val);
+				if (index > -1) {
+					this.splice(index, 1);
+				}
+			};
+			
+		</script>
+	</body>
+
+</html>

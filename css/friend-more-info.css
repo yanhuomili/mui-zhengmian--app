@@ -1,0 +1,40 @@
+.mui-table-view:before { height: 0 !important; }
+
+.mui-table-view:after { height: 0; }
+
+.mui-input-group:before { height: 0 !important; }
+
+.mui-input-group .mui-input-row:after { height: 0 !important; }
+
+.mui-input-group:after { height: 0 !important; }
+
+.mui-navigate-right:after, .mui-push-right:after { right: 0 !important; }
+
+.school:after { height: 0 !important; }
+
+.key { margin-top: 10px; }
+
+.detail-list { font-size: 15px; color: #333; background: #f1f1f1; margin-top: 15px; }
+.detail-list li { background: #fff; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
+.detail-list li a { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; width: 100% !important; padding-right: 0 !important; }
+.detail-list li a i { width: 100px; }
+.detail-list li p { font-size: 15px; color: #333; -webkit-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1; }
+.detail-list li .first-p { width: 100% !important; }
+.detail-list li i { width: 100px; }
+.detail-list li .change-tel { color: #fe6246; }
+.detail-list li button { background: #fe6246; color: #fff; border: none; outline: 0 none; padding: 6px 15px; }
+.detail-list .first-li { margin: 10px 0 !important; }
+.detail-list .first-li:after { height: 0 !important; }
+.detail-list .scholl:after { height: 0 !important; }
+.detail-list .key { margin-top: 10px; }
+
+.text-box { margin-bottom: 50px; width: 100%; padding-right: 10px; font-size: 15px; color: #999; overflow: hidden; }
+.text-box dt { width: 90%; padding-left: 15px; margin-top: 10px; float: left; }
+.text-box dt span { color: #fe7e46; }
+.text-box dd { float: right; width: 20px; height: 20px; margin-top: 10px; }
+
+.save { background: #fe6246 !important; border: transparent !important; box-shadow: none; padding: 10px 0; width: 80%; margin: 30px auto 40px; outline: 0 none; box-shadow: none; }
+
+.touxiang a { position: relative; }
+
+.camera, .from-file { opacity: 0; width: 100%; height: 100%; position: absolute; top: 0; left: 0; }

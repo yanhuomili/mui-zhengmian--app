@@ -1,0 +1,35 @@
+@charset "UTF-8";
+.mui-bar-nav{
+    border-bottom: 1px solid #f1f1f1;
+}
+.mui-table-view:before{
+//  height:0 !important;
+    background: #f1f1f1 !important;
+}
+.mui-table-view:after{
+    height: 0 !important;
+}
+.mui-media-body{
+    >div{
+        width: 70%;
+    }
+}
+.agree{
+    padding: 8px 20px;
+    background: #FE6246;
+    color: #fff;
+    border: none;
+    outline: 0 none;
+}
+.result{
+    li{
+        padding: 15px;
+    }
+    h5{
+        color: #333;
+        font-size: 15px;
+        .remark{
+            color: #FE6246;
+        }
+    }
+}

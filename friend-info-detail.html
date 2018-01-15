@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>好友用户资料</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/friend-info-detail.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <a href="#picture" class=" mui-icon mui-icon mui-icon-more mui-pull-right share"></a>
+		    <h1 class="mui-title">用户资料</h1>
+		</header>
+		<div class="mui-content">
+			<div class="bgc-p">
+				<img src="img/bg_tou@2x.png"/>
+			</div>
+			<div class="name row-c">
+				<dl class="col-c">
+					<dt><img src="img/tou@2x.png"/></dt>
+					<dd class="row-c">
+						<em><img src="img/putong@2x.png"/></em>
+						<span>于先生</span>
+					</dd>
+				</dl>
+				
+			</div>
+			<ul class="mui-table-view info-list">
+				<li class="mui-table-view-cell mark">
+					<p><i>备注</i><span>齐天大圣</span></p>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <p><i>姓名</i><span>于先生</span></p>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <p><i>性别</i><span>男</span></p>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <p class="row-l"><i>公司名</i><span>英诺科技有限公司</span></p>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <p><i>部门</i><span>研发部</span></p>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <p><i>职务</i><span>IT工程师</span></p>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <a class="mui-navigate-right more">
+		               	更多
+		            </a>
+		        </li>
+		    </ul>
+		    
+		    <div id="popover-out" class="mui-popover">
+			    	<dl class="col-c">
+			    		<dt class="col-l">
+			    			<h3>加入黑名单</h3>
+			    			<p>加入黑名单，你将不再接收对方的信息，并且你们相互看不到对方的资料</p>
+			    		</dt>
+			    		<dd class="row-lr">
+			    			<button class="mui-btn mui-btn-default mui-btn-block quxiao">取消</button>
+			    			<button class="mui-btn mui-btn-danger mui-btn-block queren">确认</button>
+			    		</dd>
+			    	</dl>
+		    </div>
+			
+		</div>
+		
+		
+		
+		<!--头像-->
+		<div id="picture" class="mui-popover mui-popover-action mui-popover-bottom share-item">
+			<ul class="mui-table-view">
+				<li id="1" class="mui-table-view-cell row-c">
+					<a class="show-sure" href="#popover-out">
+						<p class="row-c"><em class="move-pic"><img src="img/del-b.png"/></em><span class="move-to-black">加入黑名单</span></p>
+					</a>
+				</li>
+				
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#picture"><p><b>取消</b></p></a>
+				</li>
+			</ul>
+		</div>
+		
+		<script type="text/javascript" src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/mui.picker.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		
+		<script type="text/javascript">
+			mui.init();
+			
+			mui('.share')[0].addEventListener('tap',function(){
+				var ifBlack=localStorage.getItem('black');
+				console.log(typeof ifBlack,ifBlack);
+				if(ifBlack=='true'){
+					mui('.move-pic')[0].style.display='none';
+					mui('.move-to-black')[0].innerText='移出黑名单';
+					mui('.show-sure')[0].setAttribute('href','');
+				}else{
+					mui('.move-to-black')[0].innerText='加入黑名单';
+					mui('.move-pic')[0].style.display='block';
+					mui('.show-sure')[0].setAttribute('href','#popover-out');
+				}
+				
+				
+			},false);
+			
+			//加入黑名单
+			mui('.share-item').on('tap','li',function(){
+				var ifBlack=localStorage.getItem('black');
+				var id=this.getAttribute('id');
+				if(id=='1'){
+					console.log('加入黑名单');
+					console.log(id);
+					if(ifBlack=='true'){
+						localStorage.setItem('black','false');
+						mui('#picture').popover('toggle');
+					}
+				}
+				
+			})
+			
+			//是否加入黑名单
+			mui('#popover-out').on('tap','button',function(){
+				var text=this.innerText;
+				if(text=='取消'){
+					console.log('取消');
+				}else{
+					console.log('确认');
+					localStorage.setItem('black','true');
+				}
+				mui('#popover-out').popover('toggle');
+			},false)
+			
+			
+			//更多资料
+			mui('.more')[0].addEventListener('tap',function(){
+				open('friend-more-info.html');
+			},false)
+			
+		</script>
+	</body>
+
+</html>

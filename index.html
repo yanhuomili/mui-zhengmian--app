@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>登录页面</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+
+	<body>
+		<div class="mui-content">
+		    <dl class="col-c logo">
+		    	<dt><img src="img/logo.png"/></dt>
+		    	<dd>正面金融</dd>
+		    </dl>
+		    <form class="mui-input-group">
+		        <div class="mui-input-row">
+		            <label class="row-c"><img src="img/tel.png"/></label>
+		            <input type="text" class="mui-input-clear" placeholder="请输入手机号">
+		        </div>
+		        <div class="mui-input-row">
+		            <label class="row-c"><img src="img/mima.png"/></label>
+		            <input type="password" class="mui-input-clear" placeholder="请输入密码">
+		        </div>
+		    </form>
+		    <button type="button" class="mui-btn mui-btn-danger login-btn">登录</button>
+		    <div class="rf row-c">
+		    	<a href="###" class="register" id="register.html">立即注册</a>
+		    	<a href="###" class="forget" id="forget.html">忘记密码</a>
+		    </div>
+		    <button class="guang mui-btn-block mui-btn-danger mui-btn-outlined">逛一逛</button>
+		    <div class="login-way">
+		    	<p class="row-c title"><i></i><span>其他登录方式</span><i></i></p>
+		    	<ul class="mui-table-view row-lr">
+		    	        <li id="1" class="mui-table-view-cell col-c">
+		    	        	<img src="img/weixin.png"/>
+		    	            <p>微信</p>
+		    	        </li>
+		    	        <li id="2" class="mui-table-view-cell col-c">
+		    	        	<img src="img/qq.png"/>
+		    	            <p>QQ</p>
+		    	        </li>
+		    	        <li id="3" class="mui-table-view-cell col-c">
+		    	        	<img src="img/xinlang.png"/>
+		    	            <p>新浪微博</p>
+		    	        </li>
+		    	        <li id="4" class="mui-table-view-cell col-c">
+		    	        	<img src="img/tengxun.png"/>
+		    	            <p>腾讯微博</p>
+		    	        </li>
+		    	        <li id="5" class="mui-table-view-cell col-c">
+		    	        	<img src="img/youxiang.png"/>
+		    	            <p>邮箱</p>
+		    	        </li>
+		    	    </ul>
+		    </div>
+		    
+		</div>
+		<script type="text/javascript" src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui('.rf').on('tap','a',function(){
+				var url=this.id;
+				open(url);
+			})
+			mui('.guang')[0].addEventListener('tap',function(){
+				open('tongxunlu.html');
+			},false);
+			
+			
+			mui('.login-way ul').on('tap','li',function(){
+				var id=this.getAttribute('id');
+				if(id==1){
+					console.log('微信');
+				}else if(id==2){
+					console.log('QQ');
+				}else if(id==3){
+					console.log('新浪微博');
+				}else if(id==4){
+					console.log('腾讯微博');
+				}else if(id==5){
+					console.log('邮箱');
+				}
+			});
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+
+</html>

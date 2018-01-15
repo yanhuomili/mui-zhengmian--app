@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>注册页面</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/register.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		</header>
+		<div class="mui-content">
+		    <dl class="col-c logo">
+		    	<dt><img src="img/logo.png"/></dt>
+		    	<dd>正面金融</dd>
+		    </dl>
+		    <form class="mui-input-group">
+		        <div class="mui-input-row">
+		            <label class="row-c"><img src="img/tel.png"/></label>
+		            <input type="text" class="mui-input-clear" placeholder="请输入手机号">
+		        </div>
+		        <div class="mui-input-row check">
+		            <label class="row-c"><img src="img/yanzheng.png"/></label>
+		            <input type="text" class="mui-input-clear" placeholder="请输入验证码">
+		            <i class="check-code">发送验证码</i>
+		        </div>
+		        <div class="mui-input-row">
+		            <label class="row-c"><img src="img/mima.png"/></label>
+		            <input type="password" class="mui-input-clear" placeholder="请输入密码">
+		        </div>
+		    </form>
+		    <p class="xieyi row-l"><em class="active"></em>同意并接受<a href="###">正面金融app用户协议</a></p>
+		    <button type="button" class="mui-btn mui-btn-danger login-btn">注册</button>
+		   
+		  
+		    
+		</div>
+		<script type="text/javascript" src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+//			发送验证码
+			var num=60;
+			var timer=null;
+			mui('.check').on('tap','i',function(){
+				mui('.check i')[0].innerHTML=num+'s后重试';
+				clearInterval(timer);
+				timer=setInterval(function(){
+					num--;
+					mui('.check i')[0].innerHTML=num+'s后重试';
+					if(num==0){
+						clearInterval(timer);
+						mui('.check i')[0].innerHTML="发送验证码";
+						num=60;
+					}
+				},1000)
+				
+			})
+		</script>
+	</body>
+
+</html>

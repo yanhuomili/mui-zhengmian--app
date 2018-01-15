@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>好友详细资料</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/friend-more-info.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">详细资料</h1>
+		</header>
+		<div class="mui-content">
+			<!--<div id="Img"><img src="img/baby-88.png"/></div>-->
+			<form action="###" method="###" class="mui-input-group">
+				<ul class="mui-table-view detail-list">
+						<li class="mui-table-view-cell">
+				            <a class=" mui-navigate-right modify">
+				           		<p class="row-l first-p"><i>备注</i><span class="mark">菩提老祖</span></p>
+				            </a>
+				        </li>
+				        <li class="mui-table-view-cell row-l">
+				            <i>姓名</i>
+				            <p><span>如来先生</span></p>
+				        </li>	
+				        <li class="mui-table-view-cell row-l">
+				            <i>性别</i>
+				            <p><span>男</span></p>
+				        </li>
+				        <li class="mui-table-view-cell row-l">
+				            <i>手机号</i>
+				            <p class="row-lr"><span class="change-tel">申请交换手机号</span><button class="apply">申请</button></p>
+				        </li>
+				        <li class="mui-table-view-cell row-l">
+				            <i>公司名</i>
+				            <p><span>广州英诺信息技术有限公司</span></p>
+				        </li>
+				        <li class="mui-table-view-cell row-l">
+				            <i>部门</i>
+				            <p><span>研发部</span></p>
+				        </li>
+				        <li class="mui-table-view-cell row-l">
+				            <i>职务</i>
+				            <p><span>web前端</span></p>
+				        </li>
+				        <li class="mui-table-view-cell row-l">
+				            <i>工作地区</i>
+				            <p><span>广东省 广州市 白云区</span></p>
+				        </li>
+				        <li class="mui-table-view-cell row-l">
+				            <i>家乡</i>
+				            <p><span>广东省 广州市 白云区</span></p>
+				        </li>
+				        <li class="mui-table-view-cell row-l school">
+				            <i>学校</i>
+				            <p><span>广州大学</span></p>
+				        </li>
+				        
+				        <li class="mui-table-view-cell row-l key">
+				            <i>关键词1</i>
+				            <p><span>跑步</span></p>
+				        </li>
+				        <!--<li class="mui-table-view-cell row-l">
+				            <i>关键词2</i>
+				            <p><span>游泳</span></p>
+				        </li>
+				        <li class="mui-table-view-cell row-l">
+				            <i>关键词3</i>
+				            <p><span>爬山</span></p>
+				        </li>-->
+				    </ul>
+			</form>
+			<!--从后台那大数据后判断是非vip用户-->
+			<!--vip用户显示-->
+			<dl class="text-box vip">
+				<dt>您的好友不是<span>VIP</span>账户，只能显示1个关键字</dt>
+				<dd><img src="img/putong@2x.png"/></dd>
+			</dl>
+		</div>
+		
+		<script type="text/javascript" src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			//VIP显示
+//			mui('.vip')[0].style.display='block';
+			//非VIP显示
+//			mui('.disvip')[0].style.display='block';
+			
+			//申请交换手机号
+			mui('.apply')[0].addEventListener('tap',function(){
+				console.log('申请交换手机号');
+			},false);
+			
+			
+			mui('.modify')[0].addEventListener('tap',function(){
+				console.log(12)
+				open('modify-mark.html');
+			},false);
+			
+			
+			var mark=localStorage.getItem('mark');
+			if(mark){
+				mui('.mark')[0].innerText=mark;
+			}
+		</script>
+	</body>
+
+</html>

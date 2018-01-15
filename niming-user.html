@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>用户资料</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/niming-user.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">用户资料</h1>
+		</header>
+		<div class="mui-content">
+			
+			<ul class="mui-table-view head-pic">
+			    <li class="mui-table-view-cell mui-media">
+			        <a href="javascript:;" class="mui-navigate-right">
+			            <img class="mui-media-object mui-pull-left" src="img/niming12@2x.png">
+			            <div class="mui-media-body">
+			                <p class="row-lr">
+			                	<span class="row-l"><em><img src="img/vip.png"/></em><i>匿名用户</i></span>
+			                	<!--<b class="my-ew"><img src="img/erweima@2x.png"/></b>-->
+			                </p>
+			            </div>
+			        </a>
+			    </li>
+			</ul>
+			
+			<button class="add-friend mui-btn-block">加好友</button>
+		</div>
+		<script type="text/javascript" src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		
+		<script type="text/javascript">
+			mui.init();
+			mui('.head-pic').on('tap','li',function(){
+				open('niming-user-info.html');
+			})
+			
+			
+		</script>
+	</body>
+
+</html>

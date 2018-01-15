@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>新朋友</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/new-friend.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <a href="#picture" class=" mui-icon mui-icon mui-icon-more mui-pull-right operate"></a>
+		    <h1 class="mui-title">新的朋友</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view head-pic">
+			    <li class="mui-table-view-cell mui-media">
+			        <a href="javascript:;" class="mui-navigate-right">
+			            <img class="mui-media-object mui-pull-left" src="img/baby-88.png">
+			            <div class="mui-media-body">
+			                <p class="row-lr">
+			                	<span class="row-l"><em><img src="img/vip.png"/></em><i>花花</i></span>
+			                </p>
+			            </div>
+			        </a>
+			    </li>
+			</ul>
+			<ul class="mui-table-view list">
+		        <li class="mui-table-view-cell">
+		            <a id="tiezi-list.html" class="mui-navigate-right tiezi">
+		                <p><em><img src="img/tiezi@2x.png"/></em><i>他的帖子</i></p>
+		            </a>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <a id="product-list.html" class="mui-navigate-right product">
+		                <p><em><img src="img/chanpin-@2x.png"/></em><i>他的产品</i></p>
+		            </a>
+		        </li>
+		    </ul>
+			
+			<div class="btns">
+				<button class="agree mui-btn-block">同意</button>
+				<button class="refuse mui-btn-block">拒绝</button>
+			</div>
+			
+		    
+		</div>
+		
+		<div id="picture" class="mui-popover mui-popover-action mui-popover-bottom share-item">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a id="1">忽略</a>					
+				</li>
+				
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#picture"><b>取消</b></a>
+				</li>
+			</ul>
+		</div>
+		<script type="text/javascript" src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui('.head-pic').on('tap','li',function(){
+				open('moshengren-info-detail.html');
+			})
+			
+			//他的帖子
+			mui('.list').on('tap','.tiezi',function(){
+				open('tiezi-list.html');
+			})
+			//他的产品
+			mui('.list').on('tap','.product',function(){
+				open('product-list.html');
+			})
+			
+			mui('#picture').on('tap','a',function(){
+				var id=this.getAttribute('id');
+				if(id=='1'){
+					console.log('忽略');
+				}
+				mui('#picture').popover('toggle');
+			})
+			
+			mui('.btns').on('click','button',function(){
+				var text=this.innerText;
+				if(text=='同意'){
+					console.log('同意');
+				}else{
+					console.log('拒绝');
+				}
+			})
+			
+			
+		</script>
+	</body>
+
+</html>

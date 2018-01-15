@@ -1,0 +1,60 @@
+.bar-gongqiu { background: url(../img/gongqiu_pre.png) no-repeat center center; background-size: 21px 21px; }
+
+.bar-redian { background: url(../img/redian.png) no-repeat center center; background-size: 21px 21px; }
+
+.bar-tongxun { background: url(../img/tongxun.png) no-repeat center center; background-size: 21px 21px; }
+
+.bar-my { background: url(../img/wode.png) no-repeat center center; background-size: 21px 21px; }
+
+.mui-active { color: #F98A17 !important; }
+
+.search { height: 50px; padding: 5px 15px; background: #fff; }
+
+.mui-bar-nav { border-bottom: 1px solid #f1f1f1; }
+.mui-bar-nav a { padding: 5px !important; }
+
+.mui-slider-indicator.mui-segmented-control { border-bottom: none !important; }
+
+.mui-slider-indicator.mui-segmented-control { background: #fff !important; display: -webkit-box !important; display: -webkit-flex !important; display: -ms-flexbox !important; display: flex !important; -webkit-box-pack: center !important; -webkit-justify-content: center !important; -ms-flex-pack: center !important; justify-content: center !important; }
+
+.mui-segmented-control.mui-scroll-wrapper .mui-control-item { padding: 0 30px !important; border-bottom: 2px solid transparent; }
+
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active { color: #FE6246; border-bottom: 2px solid #FE6246 !important; }
+
+.mui-segmented-control.mui-scroll-wrapper { height: 46px; }
+
+.mui-fullscreen .mui-segmented-control ~ .mui-slider-group { top: 47px !important; }
+
+.mui-slider-item { border-top: none !important; }
+
+.topMenu { width: 100%; }
+
+.mui-table-view-cell:after { height: 0 !important; }
+
+.mui-table-view { background: #f1f1f1; }
+
+.list p { margin: 10px 0; }
+
+.mui-control-content { overflow-y: auto; }
+
+.mui-table-view:before, .mui-table-view:after { height: 0 !important; }
+
+.mui-table-view-cell:after { height: 0 !important; }
+
+.list { background: #f1f1f1; margin-top: 0 !important; }
+.list li { padding: 0; background: #fff; margin-bottom: 5px; }
+.list h4 { width: 100%; height: 35px; padding: 0 10px; font-size: 15px; margin: 0; }
+.list h4 i { display: inline-block; width: 25px; height: 20px; line-height: 20px; text-align: center; background: #fcbd42; color: #fff; margin-right: 10px; font-size: 12px; border-radius: 3px; }
+.list h4 b { display: inline-block; padding: 2px 10px; border: 1px solid #fe6246; border-top-width: 5px; border-radius: 2px; color: #fd8145; font-size: 14px; }
+.list .data { border-top: 1px solid #f1f1f1; border-bottom: 1px solid #f1f1f1; }
+.list p { line-height: 1.5; letter-spacing: 2px; padding: 0 15px; }
+.list p i { font-size: 21px; color: #fc5455; margin-bottom: 10px; }
+.list dl { color: #999; font-size: 12px; padding: 10px 15px; }
+.list dl dt { color: #b89304; }
+.list dl dt em { display: inline-block; width: 20px; height: 20px; margin-right: 10px; }
+.list dl dt b { display: inline-block; width: 15px; height: 15px; margin-right: 5px; }
+.list dl dt .company { margin-left: 30px; }
+.list dl .contact, .list dl .friend { width: 55px; height: 20px; line-height: 20px; text-align: center; border: 1px solid #fe6246; border-radius: 20px; color: #FE6246; }
+.list dl .del { width: 20px; height: 20px; }
+
+.in h4 i { background: #1ccfc9; }

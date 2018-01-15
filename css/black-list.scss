@@ -1,0 +1,26 @@
+@charset "UTF-8";
+.mui-bar-nav{
+    border-bottom: 1px solid #f1f1f1;
+}
+.mui-table-view:before{
+//  height:0 !important;
+    background: #f1f1f1 !important;
+}
+.mui-table-view:after{
+    height: 0 !important;
+}
+.result{
+    li{
+        padding: 15px;
+    }
+    h5{
+        height: 42px;
+        line-height: 42px;
+        color: #333;
+        margin: 0;
+        font-size: 15px;
+        .remark{
+            color: #FE6246;
+        }
+    }
+}

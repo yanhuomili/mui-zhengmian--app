@@ -1,0 +1,142 @@
+@charset "UTF-8";
+.mui-table-view:before{
+    height: 0 !important;
+}
+.mui-table-view-cell:after{
+    height: 0 !important;
+}
+.del-btn{
+    width: 90%;
+    margin: 30px auto;
+    background: #ddd;
+    color: #333;
+    border: none;
+    padding: 0;
+    a{
+        display: block;
+        color: #333 !important;
+        height: 45px;
+        line-height: 45px;
+    }
+}
+.head-pic{
+    margin: 10px 0 !important; 
+    box-shadow: none !important;
+    li{
+        box-shadow: none !important; 
+    }
+    
+    a{
+        margin: 5px -15px !important;
+        
+    }
+    .mui-media-object{
+        max-width: 44px;
+        height: 44px;
+    }
+    .mui-media-body{
+        height: 44px;
+        p{
+            height: 100% !important;
+            padding-right:20px ;
+            em{
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+            }
+            b{
+                display: inline-block;
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }    
+}
+.mui-table-view:after{
+    height: 0 !important;
+}
+.list{
+    background: #f1f1f1;
+    li{
+        background: #fff;
+        border-bottom: 1px solid #f1f1f1;
+    }
+    li:last-child{
+    }
+    .mui-table-view-cell:after{
+        left: 0;
+    }
+    p{
+        display: flex;
+        align-items: center;
+        padding: 5px 0;
+        em{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 20px;
+        }
+    }
+    .modify:after{
+        height: 0 !important;
+    }
+}
+
+.mui-popover .mui-popover-arrow:after{
+    width: 0 !important;
+}
+
+.friend{
+    color: #FE6246;
+}
+
+//拉黑提示框
+#popover-out{
+    width: 270px;
+    height: 187PX;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    overflow: hidden;
+    dl{
+      width: 100%;
+      overflow: hidden;
+      dt{
+          overflow: hidden;
+          width: 100%;
+          background: #fff;
+          padding: 20px 20px 10px;
+          box-sizing: border-box;
+          h3{
+              font-size: 18px;
+          }
+          p{
+              font-size: 16px;
+              line-height: 2;
+              letter-spacing: 3px;
+              padding: 5px 0;
+          }
+      }
+      dd{
+          width: 100%;
+//        height: 55px;
+          overflow: hidden;
+          button{
+              width: 50%;
+              height: 55px;
+              margin: 0 !important;
+              border-radius: 0;
+              border: transparent !important;
+              text-align: center;
+          }
+          .quxiao{
+              background: #f1f1f1;
+              color: #666;
+          }
+          .queren{
+              background: #FE6246;
+          }
+      }
+    }
+}
+

@@ -1,0 +1,78 @@
+@charset "UTF-8";
+.mui-content{
+    height: 100%;
+    background: #f1f1f1;
+}
+.tip{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    text-indent: 10px;
+}
+.mui-input-group:before{
+    height: 0;
+}
+.mui-input-group{
+    background: #f1f1f1;
+}
+
+.mui-input-row{
+    margin-bottom: 20px;
+    position: relative;
+    background: #fff !important;
+    .check-code{
+        width: 125px;
+        height: 40px;
+        line-height: 40px;
+        position: absolute;
+        background: #999;
+        color: #fff;
+        letter-spacing: 2px;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        border-left: 15px solid #f1f1f1;
+        font-size: 14px;
+    }
+    label{
+        padding:  0;
+        width: 50px;
+        height: 100%;
+        position: relative;
+        padding-left: 15px;
+        
+        img{
+            width: 20px;
+            height: 20px;
+        }
+    }
+    input{
+        font-size: 16px;
+        width: 85% !important;
+    }
+}
+.check{
+   .mui-icon-clear{
+        right: 120px !important;
+    } 
+}
+.mui-input-group:after{
+    height: 0;
+}
+.mui-input-group .mui-input-row:after{
+//  background: #fe6246;
+height: 0;
+}
+.login-btn{
+    width: 90%;
+    height: 40px;
+    padding: 0;
+    margin: 40px auto 0;
+    border: none;
+    box-shadow: none;
+    background: #fe6246;
+    font-size: 16px;
+}
+

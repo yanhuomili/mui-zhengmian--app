@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>用户资料</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/user-info.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <a href="#picture" class=" mui-icon mui-icon mui-icon-more mui-pull-right share"></a>
+		    <h1 class="mui-title">用户资料</h1>
+		</header>
+		<div class="mui-content">
+			<div class="bgc-p">
+				<img src="img/bg_tou@2x.png"/>
+				<div class="erwei">
+					<img src="img/erweima.png"/>
+				</div>
+			</div>
+			<div class="name row-c">
+				<dl class="col-c">
+					<dt><img src="img/tou@2x.png"/></dt>
+					<dd class="row-c">
+						<em><img src="img/vip.png"/></em>
+						<span>于先生</span>
+					</dd>
+				</dl>
+				
+			</div>
+			
+			<ul class="mui-table-view info-list">
+		        <li class="mui-table-view-cell">
+		            <p><i>姓名</i><span>于先生</span></p>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <p><i>性别</i><span>男</span></p>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <p class="row-l"><i>公司名</i><span>英诺科技有限公司</span></p>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <p><i>部门</i><span>研发部</span></p>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <p><i>职务</i><span>IT工程师</span></p>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <a class="mui-navigate-right more">
+		               	更多
+		            </a>
+		        </li>
+		    </ul>
+		    
+		    <div class="add row-c">
+		    	<i><img src="img/add@2x.png"/></i>
+		    	<span>添加个人资料</span>
+		    </div>
+		    
+			
+		</div>
+		
+		
+		
+		<!--头像-->
+		<div id="picture" class="mui-popover mui-popover-action mui-popover-bottom share-item">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell row-c">
+					<dl id="1" class="col-c">
+						<dt><img src="img/qq@2x.png"/></dt>
+						<dd>QQ好友</dd>
+					</dl>
+					
+					<dl id="2" class="col-c">
+						<dt><img src="img/weixin.png"/></dt>
+						<dd>微信好友</dd>
+					</dl>
+					
+				</li>
+				
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#picture"><b>取消</b></a>
+				</li>
+			</ul>
+		</div>
+		
+		<script type="text/javascript" src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/mui.picker.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		
+		<script type="text/javascript">
+			mui.init();
+			mui('.add')[0].addEventListener('tap',function(){
+				open('detail-info.html');
+			},false);
+			mui('.more')[0].addEventListener('tap',function(){
+				open('my-more-info.html');
+			},false);
+			
+			mui('.share')[0].addEventListener('tap',function(){
+				console.log('share')
+			},false);
+			
+			
+			//分享功能
+			mui('.share-item').on('tap','dl',function(){
+				var id=this.getAttribute('id');
+				if(id=='1'){
+					console.log('QQ好友');
+					console.log(id);
+				}else if(id=='2'){
+					console.log('微信好友');
+					console.log(id);
+				}
+				console.log(this.innerText);
+				mui('#picture').popover('toggle');
+			})
+			
+			
+			//二维码信息
+			mui('.erwei')[0].addEventListener('tap',function(){
+				open('erweima.html');
+			},false);
+				
+				
+
+ 
+
+		</script>
+	</body>
+
+</html>

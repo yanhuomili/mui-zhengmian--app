@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+.mui-bar-nav{
+    border-bottom: 1px solid #f1f1f1;
+}
+.company-name{
+    width:100%;
+    height:40px;
+    padding: 0 10px;
+    background: #fff;
+    color: #b89304;
+    font-size: 14px;
+    dt{
+        em{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        i{
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            margin-right:5px;
+        }
+        p{
+            margin-left: 20px;
+            color: #b89304;
+        }
+    }
+    dd{
+        width: 20px;
+        height: 20px;
+    }
+}
+.plan{
+    width: 100%;
+    color: #fff;
+    background: #fd790e;
+    font-size: 15px;
+    dt{
+        width: 100%;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+        border-bottom:1px solid #fd9142;
+    }
+    dd{
+        padding: 15px 20px;
+        .dd-left{
+            .nianlv{
+                margin-bottom: 25px;
+            }   
+            .n{
+                font-size: 20px;
+            }
+        }
+        .dd-right{
+            em{
+                display: inline-block;
+                width: 6px;
+                height: 6px;
+                background: #fd926a;
+                border-radius: 2px;
+                margin-right: 10px;
+            }
+            p{
+                color: #fff;
+                margin: 5px 0;
+            }
+            
+        }
+    }
+}
+.jianjie{
+    width: 100%;
+    background: #fff;
+    dt{
+        width: 100%;
+        height: 40px;
+        border-bottom: 1px solid #f1f1f1;
+        font-size: 14px;
+    }
+    dd{
+        padding:15px;
+        
+        .text{
+            margin-bottom: 10px;
+            align-items: flex-start;
+        }
+        em{
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            background: #f9e06d;
+            border-radius: 50%;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+        p{
+            flex: 1;
+            line-height: 1.5;
+            letter-spacing: 2px;
+        }
+    }
+}

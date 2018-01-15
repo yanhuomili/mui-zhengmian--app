@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>发布</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/publish-tiezi.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">发布</h1>
+		</header>
+		<div class="mui-content">
+			<div class="mui-input-row title">
+		        <label class="row-l">
+		        	<b class=""><img src="img/baioti@2x.png"/></b>
+		        	<span>标题：</span>
+		        </label>
+		    	<input type="text" class="mui-input-clear" placeholder="">
+		    </div>
+			<h4 class="add-pic">添加图片</h4>
+			<div class="picbox">
+				<div class="pic col-c">
+					<em>
+						<img src="img/tianjia@2x.png"/>
+						<input type="file" class="addpic" /><!--accept="image/*" capture="camera"-->
+					</em>
+					<span>添加图片</span>
+				</div>
+				<div class="imgbox row-c">
+					<!--<img src="img/baby-88.png"/>-->
+				</div>
+			</div>
+			<h4 class="add-pic">添加图片</h4>
+			<div class="textbox">
+				<textarea name="" rows="" cols="" placeholder="请输入您的正文内容"></textarea>
+			</div>
+			<ul class="choose">
+		        <li class="row-lr">
+		            <span>实名</span>
+		            <b class="active"></b>
+		        </li>
+		        <li class="row-lr">
+		            <span>匿名</span>
+		            <b></b>
+		        </li>
+		    </ul>
+		    
+		    <button class="submit mui-btn-danger mui-btn-block">提交</button>
+		    
+		</div>
+		<script type="text/javascript" src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		
+		<script type="text/javascript">
+			mui.init();
+			mui('.choose').on('tap','li',function(){
+				var siblings=this.previousElementSibling||this.nextElementSibling;
+				siblings.lastElementChild.className="";
+				this.lastElementChild.className="active";
+			})
+			
+			//添加图片
+			mui('.pic').on('change','.addpic',function(){
+				var f=this.files;//获取文件对象
+				var len=f.length;//文件对象的个数
+				console.log(f);
+				for(var i=0;i<len;i++){
+					(function(index){
+						var read=new FileReader();//实例文件读取对象
+						read.readAsDataURL(f[i]);//调用读取文件的方法
+						console.log(read)
+						read.onload=function(){
+							var Img=document.createElement('img');
+							Img.src=this.result;
+							mui('.imgbox')[0].appendChild(Img);
+							mui('.pic')[0].style.display="none";
+//							console.log(this.result);//添加进来的文件的路径
+//							var Img=mui('.img')[0];
+//							console.log(this.result)
+//							Img.src=this.result;
+						}
+					})(i)
+				}
+				return false;//阻止默认事件
+			})
+			
+			
+		</script>
+	</body>
+
+</html>

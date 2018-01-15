@@ -1,0 +1,14 @@
+.mui-bar-nav { border: 1px solid #f1f1f1; }
+
+.mui-table-view:before, .mui-table-view:after { height: 0 !important; }
+
+.mui-table-view-cell:after { height: 0 !important; }
+
+.list { background: #f1f1f1; margin-top: 0 !important; }
+.list li { padding: 0 0 20px; background: #fff; margin-bottom: 5px; }
+.list h4 { width: 100%; height: 40px; padding: 0 10px; font-size: 15px; margin: 0; border-bottom: 1px solid #f1f1f1; }
+.list h4 i { display: inline-block; width: 60px; height: 20px; line-height: 20px; text-align: center; background: #faf0c9; color: #fbc803; margin-right: 10px; font-size: 12px; }
+.list p { line-height: 1.5; letter-spacing: 2px; padding: 10px 15px 10px; }
+.list dl { color: #999; font-size: 12px; padding: 0 15px; }
+.list dl dt em { display: inline-block; width: 15px; height: 15px; margin-right: 5px; }
+.list dl dt .zan { margin-left: 20px; }

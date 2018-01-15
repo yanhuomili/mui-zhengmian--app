@@ -1,0 +1,22 @@
+.mui-bar-nav { border-bottom: 1px solid #f1f1f1; }
+
+.company-name { width: 100%; height: 40px; padding: 0 10px; background: #fff; color: #b89304; font-size: 14px; }
+.company-name dt em { display: inline-block; width: 20px; height: 20px; margin-right: 10px; }
+.company-name dt i { display: inline-block; width: 15px; height: 15px; margin-right: 5px; }
+.company-name dt p { margin-left: 20px; color: #b89304; }
+.company-name dd { width: 20px; height: 20px; }
+
+.plan { width: 100%; color: #fff; background: #fd790e; font-size: 15px; }
+.plan dt { width: 100%; height: 45px; line-height: 45px; text-align: center; border-bottom: 1px solid #fd9142; }
+.plan dd { padding: 15px 20px; }
+.plan dd .dd-left .nianlv { margin-bottom: 25px; }
+.plan dd .dd-left .n { font-size: 20px; }
+.plan dd .dd-right em { display: inline-block; width: 6px; height: 6px; background: #fd926a; border-radius: 2px; margin-right: 10px; }
+.plan dd .dd-right p { color: #fff; margin: 5px 0; }
+
+.jianjie { width: 100%; background: #fff; }
+.jianjie dt { width: 100%; height: 40px; border-bottom: 1px solid #f1f1f1; font-size: 14px; }
+.jianjie dd { padding: 15px; }
+.jianjie dd .text { margin-bottom: 10px; -webkit-box-align: start; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; }
+.jianjie dd em { display: inline-block; width: 5px; height: 5px; background: #f9e06d; border-radius: 50%; margin-right: 10px; margin-top: 10px; }
+.jianjie dd p { -webkit-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1; line-height: 1.5; letter-spacing: 2px; }

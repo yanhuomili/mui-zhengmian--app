@@ -1,0 +1,35 @@
+.mui-popover .mui-popover-arrow:after { width: 0 !important; }
+
+.share { -webkit-transform: rotateZ(90deg); transform: rotateZ(90deg); }
+
+.mui-table-view:after { height: 0; }
+
+.bgc-p { position: relative; width: 100%; height: 100px; }
+.bgc-p .erwei { position: absolute; width: 23px; height: 23px; top: 10px; right: 20px; }
+
+.name { width: 100%; height: 100px; background: #fff; }
+.name dl { margin-top: -70px; z-index: 2; }
+.name dl dt { width: 70px; height: 70px; margin-bottom: 10px; }
+.name dl dd em { display: inline-block; width: 20px; height: 20px; margin-right: 10px; }
+
+.info-list p { -webkit-box-align: start; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; color: #333; font-size: 15px; }
+.info-list p i { display: inline-block; width: 70px; }
+
+.add { width: 100%; height: 50px; color: #ff5c5c; margin: 10px 0; background: #fff; }
+.add i { display: inline-block; width: 20px; height: 20px; margin-right: 10px; }
+
+.share-item dl { color: #333; font-size: 14px; margin: 0 20px; }
+.share-item dl dt { width: 44px; height: 44px; margin-bottom: 5px; }
+
+#picture em { display: inline-block; width: 20px; height: 20px; margin-right: 10px; }
+#picture a { width: 100%; }
+
+#popover-out { width: 270px; height: 187PX; top: 50% !important; -webkit-transform: translateY(-50%) !important; -ms-transform: translateY(-50%) !important; transform: translateY(-50%) !important; overflow: hidden; }
+#popover-out dl { width: 100%; overflow: hidden; }
+#popover-out dl dt { overflow: hidden; width: 100%; background: #fff; padding: 20px 20px 10px; box-sizing: border-box; }
+#popover-out dl dt h3 { font-size: 18px; }
+#popover-out dl dt p { line-height: 1.8; letter-spacing: 3px; }
+#popover-out dl dd { width: 100%; overflow: hidden; }
+#popover-out dl dd button { width: 50%; height: 55px; margin: 0 !important; border-radius: 0; border: transparent !important; text-align: center; }
+#popover-out dl dd .quxiao { background: #f1f1f1; color: #666; }
+#popover-out dl dd .queren { background: #FE6246; }

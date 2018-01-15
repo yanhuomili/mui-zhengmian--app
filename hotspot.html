@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>热点</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/hotspot.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="publish mui-icon  mui-pull-right"><img src="img/fabu-add@2x.png"/></a>
+		    <h1 class="mui-title">热点</h1>
+		</header>
+		
+		<div class="mui-content">
+			<ul class="mui-table-view list">
+		        <li class="mui-table-view-cell">
+		           <h4 class="row-l"><i>黄金主题</i><span>国庆快到了黄金价格会不会涨上去</span></h4>
+		           <h3 class="row-lr" data-name="true">
+		           	<p class="row-l"><b><img src="img/baby-88.png"/></b><i><img src="img/vip.png"/></i><span>张三</span></p>
+		           </h3>
+		           <p>国庆快到了黄金价格会不会涨上去国庆快到了黄金价格会不会涨上去国庆快到了黄金价格会不会涨上去国庆快到了黄金价格会不会涨上去...</p>
+		        	<dl class="row-lr">
+		        		<dd>10-31 15:00</dd>
+		        		<dt class="row-l">
+		        			<em><img src="img/dainzan@2x.png"/></em><span>20</span><em><img src="img/pinglun@2x.png"/></em><span>33</span>
+		        		</dt>
+		        	</dl>
+		        </li>
+		        <li class="mui-table-view-cell">
+		           <h4 class="row-l del-border"><i class="baoxian">保险主题</i><span>国庆快到了黄金价格会不会涨上去</span></h4>
+		           <div class="pic"><img src="img/guanggao@2x.png"/></div>
+		           <h3 class="row-lr"  data-name="true">
+		           	<p class="row-l"><b><img src="img/baby-88.png"/></b><i><img src="img/putong@2x.png"/></i><span class="baoxian-text">小李子</span></p>
+		           </h3>
+		           <p>国庆快到了黄金价格会不会涨上去国庆快到了黄金价格会不会涨上去国庆快到了黄金价格会不会涨上去国庆快到了黄金价格会不会涨上去...</p>
+		        	<dl class="row-lr">
+		        		<dd>10-31 15:00</dd>
+		        		<dt class="row-l">
+		        			<em><img src="img/dianzanfugai@2x.png"/></em><span>20</span><em><img src="img/pinglun@2x.png"/></em><span>33</span>
+		        		</dt>
+		        	</dl>
+		        </li>
+		        <li class="mui-table-view-cell">
+		           <h4 class="row-l"><i>黄金主题</i><span>国庆快到了黄金价格会不会涨上去</span></h4>
+		           <h3 class="row-lr"  data-name="false">
+		           	<p class="row-l"><b><img src="img/niming12@2x.png"/></b><i><img src="img/vip.png"/></i><span>匿名</span></p>
+		           </h3>
+		           <p>国庆快到了黄金价格会不会涨上去国庆快到了黄金价格会不会涨上去国庆快到了黄金价格会不会涨上去国庆快到了黄金价格会不会涨上去...</p>
+		        	<dl class="row-lr">
+		        		<dd>10-31 15:00</dd>
+		        		<dt class="row-l">
+		        			<em><img src="img/dainzan@2x.png"/></em><span>20</span><em><img src="img/pinglun@2x.png"/></em><span>33</span>
+		        		</dt>
+		        	</dl>
+		        </li>
+		        
+		    </ul>
+			
+			
+		</div>
+		<nav class="mui-bar mui-bar-tab">
+		    <a href="gongqiuquan.html" class="mui-tab-item">
+		        <span class="mui-icon bar-gongqiu"></span>
+		        <span class="mui-tab-label">供求圈</span>
+		    </a>
+		    <a href="###" class="mui-tab-item">
+		        <span class="mui-icon mui-active bar-redian"></span>
+		        <span class="mui-tab-label">热点</span>
+		    </a>
+		    <a href="tongxunlu.html" class="mui-tab-item">
+		        <span class="mui-icon bar-tongxun"></span>
+		        <span class="mui-tab-label">通讯录</span>
+		    </a>
+		    <a href="personal-center.html" class="mui-tab-item">
+		        <span class="mui-icon bar-my"></span>
+		        <span class="mui-tab-label">个人中心</span>
+		    </a>
+		</nav>
+		<script type="text/javascript" src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		
+		<script type="text/javascript">
+			mui.init();
+			mui('.mui-bar-tab').on('tap','a',function(){document.location.href=this.href;});
+			
+			//跳到详情页
+			mui('.list').on('tap','h4',function(){
+				open('tiezi-detail.html');
+			});
+			//发布帖子
+			mui('.publish')[0].addEventListener('tap',function(){
+				open('publish-tiezi.html');
+			},false);
+			//查看用户资料
+			mui('.list').on('tap','h3',function(){
+				var user=this.getAttribute('data-name');
+				console.log(user)
+				if(user=='true'){
+					open('shiming-user-center.html');
+				}else{
+					open('niming-user.html');
+				}
+				
+			})
+		</script>
+	</body>
+
+</html>

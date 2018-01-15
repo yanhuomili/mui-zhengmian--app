@@ -1,0 +1,38 @@
+.mui-bar-nav { border-bottom: 1px solid #f1f1f1; }
+
+.title { width: 100%; height: 40px; font-size: 15px; color: #333; font-weight: normal; padding: 0 15px; background: #fff; margin: 0 0 5px; }
+.title em { display: inline-block; width: 60px; height: 20px; line-height: 20px; text-align: center; color: #FBC803; background: #faf0c9; margin-right: 10px; font-size: 12px; }
+
+.share { -webkit-transform: rotateZ(90deg); transform: rotateZ(90deg); }
+
+.box { width: 100%; padding: 5px 18px; background: #fff; }
+.box .name { margin-bottom: 10px; }
+.box .name dl dt { width: 30px; height: 30px; margin-right: 10px; }
+.box .name dl dd b { display: inline-block; width: 20px; height: 20px; margin-right: 5px; }
+.box .name dl dd i { color: #b89304; font-size: 15px; }
+.box .name dl dd .time { font-size: 12px; color: #999; }
+.box .name button { width: 50px; height: 20px; padding: 0; border-radius: 20px; color: #fff; background: #ccc; font-size: 12px; }
+.box > p { color: #555; margin-bottom: 20px; line-height: 1.5; letter-spacing: 2px; }
+.box .tip { display: inline-block; width: 100%; padding: 10px 0; line-height: 20px; color: #999; font-size: 12px; border-bottom: 1px solid #f1f1f1; }
+
+.comment { width: 100%; background: #fff; padding: 0 0 20px; }
+.comment > h3 { width: 100%; height: 40px; padding: 0 100px; margin: 0; }
+.comment > h3 em { display: inline-block; width: 20px; height: 20px; margin-right: 5px; }
+.comment .zan-list { width: 100%; height: 40px; padding: 0 15px; background: #f1f1f1; }
+.comment .zan-list dt { width: 15px; height: 15px; margin-right: 15px; }
+.comment .zan-list dd i { display: inline-block; width: 25px; height: 25px; margin-right: 10px; }
+
+.mui-table-view:before, .mui-table-view:after { height: 0 !important; }
+
+.mui-table-view .mui-media-object { max-width: 25px; height: 25px; }
+
+.list h5 { color: #333; font-size: 14px; margin: 10px 0 15px; }
+.list .rt { margin-right: 25px; font-size: 12px; }
+.list .reply { color: #46C7FE; }
+
+.footer { width: 100%; height: 40px; padding: 0 15px; }
+.footer input { -webkit-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1; margin: 0; padding: 0; font-size: 14px; border: none; outline: 0 none; height: 30px; text-indent: 10px; }
+.footer i { display: inline-block; width: 25px; height: 25px; margin-left: 10px; }
+
+.share-item dl { color: #333; font-size: 14px; }
+.share-item dl dt { width: 44px; height: 44px; margin-bottom: 5px; }

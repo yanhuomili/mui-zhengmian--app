@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>我的二维码</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/erweima.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">我的二维码</h1>
+		</header>
+		<div class="mui-content">
+			<dl class="erwei">
+				<dt class="row-l"><i><img src="img/tou@2x.png"/></i><span>花花</span></dt>
+				<dd><img src="img/weima@2x.png"/></dd>
+			</dl>
+			<button class="mui-btn-danger mui-btn-block share">分享</button>
+			<button class="mui-btn-block save-pic">保存图片</button>
+			
+		</div>
+		<script type="text/javascript" src="js/mui.min.js"></script>
+		
+		<script type="text/javascript">
+			mui.init();
+			mui('.share')[0].addEventListener('tap',function(){
+				console.log('分享');
+			})
+			mui('.save-pic')[0].addEventListener('tap',function(){
+				console.log('保存图片');
+			})
+		</script>
+	</body>
+
+</html>

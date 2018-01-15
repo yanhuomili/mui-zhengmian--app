@@ -1,0 +1,18 @@
+.mui-bar-nav { border-bottom: 1px solid #f1f1f1; }
+
+.mui-table-view:after, .mui-table-view:before { height: 0 !important; }
+
+.head-pic { margin: 10px 0 40px !important; box-shadow: none !important; }
+.head-pic li { box-shadow: none !important; }
+.head-pic a { margin: 0px -15px !important; }
+.head-pic .mui-media-object { max-width: 44px; height: 44px; }
+.head-pic .mui-media-body { height: 44px; }
+.head-pic .mui-media-body p { height: 100% !important; padding-right: 20px; }
+.head-pic .mui-media-body p em { display: inline-block; width: 20px; height: 20px; margin-right: 10px; }
+.head-pic .mui-media-body p b { display: inline-block; width: 25px; height: 25px; }
+
+button { width: 90% !important; background: #FE6246; margin: 20px auto 0; border: transparent !important; outline: 0 none; color: #fff; }
+
+.add { background: #FE6246; }
+
+.send { background: #dddddd; color: #333; }

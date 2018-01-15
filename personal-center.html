@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>个人中心</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/personal-center.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <!--<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>-->
+		    <h1 class="mui-title">个人中心</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view head-pic">
+			    <li class="mui-table-view-cell mui-media">
+			        <a href="javascript:;" class="mui-navigate-right">
+			            <img class="mui-media-object mui-pull-left" src="img/baby-88.png">
+			            <div class="mui-media-body">
+			                <p class="row-lr">
+			                	<span class="row-l"><em><img src="img/vip.png"/></em><i>花花</i></span>
+			                	<b class="my-ew"><img src="img/erweima@2x.png"/></b>
+			                </p>
+			            </div>
+			        </a>
+			    </li>
+			</ul>
+			<ul class="mui-table-view list">
+		        <li class="mui-table-view-cell">
+		            <a id="tiezi-list.html" class="mui-navigate-right tiezi">
+		                <p><em><img src="img/tiezi@2x.png"/></em><i>我的帖子</i></p>
+		            </a>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <a id="product-list.html" class="mui-navigate-right product">
+		                <p><em><img src="img/chanpin-@2x.png"/></em><i>我的产品</i></p>
+		            </a>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <a id="contact.html" class="mui-navigate-right contact">
+		                <p><em><img src="img/lianxi@2x.png"/></em><i>联系我们</i></p>
+		            </a>
+		        </li>
+		       <li class="mui-table-view-cell modify">
+		            <a id="modify-pw.html" class="mui-navigate-right">
+		                <p><em><img src="img/xiugai@2x.png"/></em><i>修改密码</i></p>
+		            </a>
+		        </li>
+		        <li class="mui-table-view-cell black-name">
+		            <a id="black-list.html" class="mui-navigate-right">
+		                <p><em><img src="img/heimingdan@2x.png"/></em><i>黑名单</i></p>
+		            </a>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <a href="#popover-out" class="mui-navigate-right zhuxiao">
+		                <p><em><img src="img/tuichu@2x.png"/></em><i>注销</i></p>
+		            </a>
+		        </li>
+		    </ul>
+		    
+		    <div id="popover-out" class="mui-popover">
+			    	<dl class="col-c">
+			    		<dt class="row-c">确认退出当前账号</dt>
+			    		<dd class="row-lr">
+			    			<button class="mui-btn mui-btn-default mui-btn-block quxiao">取消</button>
+			    			<button class="mui-btn mui-btn-danger mui-btn-block queren">确认</button>
+			    		</dd>
+			    	</dl>
+		    </div>
+		    
+		</div>
+		<nav class="mui-bar mui-bar-tab">
+		    <a href="gongqiuquan.html" class="mui-tab-item">
+		        <span class="mui-icon bar-gongqiu"></span>
+		        <span class="mui-tab-label">供求圈</span>
+		    </a>
+		    <a href="hotspot.html" class="mui-tab-item">
+		        <span class="mui-icon bar-redian"></span>
+		        <span class="mui-tab-label">热点</span>
+		    </a>
+		    <a href="tongxunlu.html" class="mui-tab-item">
+		        <span class="mui-icon bar-tongxun"></span>
+		        <span class="mui-tab-label">通讯录</span>
+		    </a>
+		    <a href="###" class="mui-tab-item">
+		        <span class="mui-icon mui-active bar-my"></span>
+		        <span class="mui-tab-label">个人中心</span>
+		    </a>
+		</nav>
+		<script type="text/javascript" src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui('.mui-bar-tab').on('tap','a',function(){document.location.href=this.href;});
+			
+			//跳转页面
+			mui('.list').on('tap','a',function(){
+				var url=this.getAttribute('id');
+				console.log(typeof url);
+				if(url){
+					open(url);
+				}
+			},false);
+			
+			//退出账号
+			mui('#popover-out').on('tap','button',function(){
+				var text=this.innerText;
+				if(text=='取消'){
+					console.log('取消');
+				}else{
+					console.log('确认')
+				}
+				mui('#popover-out').popover('toggle');
+			},false)
+			
+			
+			
+			
+			//用户资料
+			mui('.head-pic')[0].addEventListener('tap',function(){
+				open('user-info.html');
+			})
+			//二维码
+			mui('.head-pic').on('tap','.my-ew',function(){
+				open('erweima.html');
+			})
+			
+		</script>
+	</body>
+
+</html>

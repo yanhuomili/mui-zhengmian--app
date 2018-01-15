@@ -1,0 +1,336 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>我的详细资料</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/my-more-info.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">详细资料</h1>
+		</header>
+		<div class="mui-content">
+			<!--<div id="Img"><img src="img/baby-88.png"/></div>-->
+			<form action="###" method="###" class="mui-input-group">
+				<ul class="mui-table-view detail-list">
+				        <li class="mui-table-view-cell first-li in">
+				            <a href="#picture" class="mui-navigate-right">
+				                <div class="mui-input-row row-l">
+							        <label>
+							        	<span>头像</span>
+							        </label>
+							    	<input type="text" class="mui-input-clear" placeholder="请选择头像">
+							    </div>
+				            </a>
+				        </li>
+				        <li class="mui-table-view-cell in">
+				            <a class="">
+				            	<div class="mui-input-row row-l">
+							        <label>
+							        	<span>姓名</span>
+							        </label>
+							        <span>花花</span>
+							    </div>
+				            </a>
+				        </li>	
+				        <li class="mui-table-view-cell in">
+				            <a class="">
+				            	<div class="mui-input-row row-l">
+							        <label>
+							        	<span>性别</span>
+							        </label>
+							        <span>女</span>
+							    </div>
+				            </a>
+				        </li>
+				        <li class="mui-table-view-cell in">
+				            <a class="">
+				            	<div class="mui-input-row row-l">
+							        <label>
+							        	<span>手机号</span>
+							        </label>
+							        <span>13654214754</span>
+							    </div>
+				            </a>
+				        </li>
+				        <li class="mui-table-view-cell in">
+				            <a class="">
+				            	<div class="mui-input-row row-l">
+							        <label>
+							        	<span>公司名</span>
+							        </label>
+							        <span>英诺科技有限公司</span>
+							    </div>
+				            </a>
+				        </li>
+				        <li class="mui-table-view-cell in">
+				            <a class="">
+				            	<div class="mui-input-row row-l">
+							        <label>部门</label>
+							        <span>研发部</span>
+							    </div>
+				            </a>
+				        </li>
+				        <li class="mui-table-view-cell in">
+				            <a class="">
+				            	<div class="mui-input-row row-l">
+							        <label>职务</label>
+							        <span>前端工程师</span>
+							    </div>
+				            </a>
+				        </li>
+				        <li class="mui-table-view-cell in">
+				            <a id="showCityPicker3" class="mui-navigate-right">
+				            	<div class="mui-input-row">
+							        <label>
+							        	<span>工作地区</span>
+							        </label>
+							    	<input id="cityResult3" type="text" class="mui-input-clear" value="广东省 广州市 白云区" placeholder="请输入工作地区">
+							    </div>
+				            </a>
+				        </li>
+				        <li class="mui-table-view-cell in">
+				            <a id="home" class="mui-navigate-right">
+				            	<div class="mui-input-row">
+							        <label>家乡</label>
+							    	<input id="home-text" type="text" class="mui-input-clear" value="广西壮族 梧州市 藤县" placeholder="选择家乡，发现老乡">
+							    </div>
+				            </a>
+				        </li>
+				        <li class="mui-table-view-cell in scholl">
+				            <a class="">
+				            	<div class="mui-input-row">
+							        <label>学校</label>
+							    	<input type="text" class="mui-input-clear" value="广州大学" placeholder="选择学校，发现校友">
+							    </div>
+				            </a>
+				        </li>
+				        <li class="mui-table-view-cell in key">
+				            <a class="">
+				            	<div class="mui-input-row row-l">
+							        <label>关键词1</label>
+							        <input type="text" name="" id="" value="徒步" />
+							    </div>
+				            </a>
+				        </li>
+				        <!--非vip用户禁用后两个关键词-->
+				        <li class="mui-table-view-cell in">
+				            <a class="">
+				            	<div class="mui-input-row row-l">
+							        <label>关键词2</label>
+							        <input type="text" name="" id="" value="游泳" />
+							    </div>
+				            </a>
+				        </li>
+				        <li class="mui-table-view-cell in">
+				            <a class="">
+				            	<div class="mui-input-row row-l">
+							        <label>关键词3</label>
+							        <input type="text" name="" id="" value="爬山" />
+							    </div>
+				            </a>
+				        </li>
+				    </ul>
+			</form>
+			<!--从后台那大数据后判断是非vip用户-->
+			<!--vip用户显示-->
+			<dl class="text-box vip">
+				<dt>您已成为<span>VIP</span>用户，可填写3个关键字</dt>
+				<dd><img src="img/vip.png"/></dd>
+			</dl>
+			<!--非vip用户显示-->
+			<dl class="text-box disvip">
+				<dt>
+					<div>* 注：非VIP只能输入一个关键字</div>
+					<div><i class="xing">*</i> 项为必填项</div>
+				</dt>
+				<dd class="row-r reply-vip"><span>申请VIP</span><em><img src="img/vip.png"/></em></dd>
+			</dl>
+			
+			<button class="save mui-btn-danger mui-btn-block">保存</button>
+			
+			
+			
+		</div>
+		
+		<!--头像-->
+		<div id="picture" class="mui-popover mui-popover-action mui-popover-bottom touxiang">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#" onclick="getImage()">
+						拍照或录像
+						<!--<input type="file" accept="image/*" capture="camera"  class="camera" />-->
+						<!--<input type="file" class="file" accept="image/*" capture="camera" multiple />-->
+					</a>
+				</li>
+				<li class="mui-table-view-cell ">
+					<a href="#">
+						从手机相册中选取
+						<input type="file" class="from-file" multiple/>
+					</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#picture"><b>取消</b></a>
+				</li>
+			</ul>
+		</div>
+		<script type="text/javascript" src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/mui.picker.min.js"></script>
+		<script type="text/javascript" src="js/city.data.js"></script>
+		<script type="text/javascript" src="js/city.data-3.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			//VIP显示
+//			mui('.vip')[0].style.display='block';
+			//非VIP显示
+//			mui('.disvip')[0].style.display='block';
+			
+			
+			//相册更换头像
+			mui('.touxiang').on('change','.from-file',function(){
+				mui('#picture').popover('toggle');
+				var f=this.files;//获取文件对象
+				var len=f.length;//文件对象的个数
+				console.log(f);
+				for(var i=0;i<len;i++){
+					(function(index){
+						var read=new FileReader();//实例文件读取对象
+						read.readAsDataURL(f[i]);//调用读取文件的方法
+						console.log(read)
+						read.onload=function(){
+//							this.result为图片的src
+//							var img=document.createElement('img');
+//							mui.toast(this.result)
+//							img.src=this.result;
+//							mui('#Img')[0].appendChild(img);
+						}
+					})(i)
+				}
+				return false;//阻止默认事件
+			})
+			
+			
+			//拍照换头像
+//			mui('.touxiang').on('change','.camera',function(){
+//				mui('#picture').popover('toggle');
+//				var f=this.files;//获取文件对象
+//				var len=f.length;//文件对象的个数
+//				console.log(f);
+//				for(var i=0;i<len;i++){
+//					(function(index){
+//						var read=new FileReader();//实例文件读取对象
+//						read.readAsDataURL(f[i]);//调用读取文件的方法
+//						console.log(read)
+//						read.onload=function(){
+////							this.result为图片的src
+//							
+////							console.log(this.result);//添加进来的文件的路径
+////							var Img=mui('.img')[0];
+////							console.log(this.result)
+////							Img.src=this.result;
+//						}
+//					})(i)
+//				}
+//				return false;//阻止默认事件
+//			})
+			
+			
+			//地址选择
+			mui.ready(function(){
+				var cityPicker3 = new mui.PopPicker({
+					layer: 3
+				});
+				cityPicker3.setData(cityData3);
+				var showCityPickerButton = document.getElementById('showCityPicker3');
+				var cityResult3 = document.getElementById('cityResult3');
+				showCityPickerButton.addEventListener('tap', function(event) {
+					cityPicker3.show(function(items) {
+						cityResult3.value =(items[0] || {}).text + " " + (items[1] || {}).text + " " + (items[2] || {}).text;
+						console.log((items[0] || {}).text + " " + (items[1] || {}).text + " " + (items[2] || {}).text)
+						//返回 false 可以阻止选择框的关闭
+						//return false;
+					});
+				}, false);
+				
+				
+				var home = document.getElementById('home');
+				var homeText = document.getElementById('home-text');
+				home.addEventListener('tap', function(event) {
+					cityPicker3.show(function(items) {
+						homeText.value =(items[0] || {}).text + " " + (items[1] || {}).text + " " + (items[2] || {}).text;
+						console.log((items[0] || {}).text + " " + (items[1] || {}).text + " " + (items[2] || {}).text)
+						//返回 false 可以阻止选择框的关闭
+						//return false;
+					});
+				}, false);
+				
+			})
+			
+			
+			//申请VIP
+			mui('.reply-vip')[0].addEventListener('tap',function(){
+				open('buy-vip.html');
+			},false);
+			
+			
+			
+			//调用原生摄像头
+			var gentry;
+			function plusReady(){
+				// 获取摄像头目录对象
+				alert(plus)
+				plus.io.resolveLocalFileSystemURL( "_doc/", function ( entry ) {
+					entry.getDirectory( "camera", {create:true}, function ( dir ) {
+						gentry = dir;
+//						updateHistory();
+					}, function ( e ) {
+						mui.toast( "Get directory \"camera\" failed: "+e.message );
+					} );
+				}, function ( e ) {
+					mui.toast( "Resolve \"_doc/\" failed: "+e.message );
+				} );
+			}
+			if(window.plus){
+				plusReady();
+			}else{
+				document.addEventListener("plusready",plusReady,false);
+			}
+			// 拍照
+			function getImage() {
+				mui('#picture').popover('toggle');
+				mui.toast( "开始拍照：" );
+				var cmr = plus.camera.getCamera();
+				cmr.captureImage( function ( p ) {
+//					参数p就是图片的路径
+					mui.toast( "成功："+p );
+//					var img=document.createElement('img');
+//					img.src=p;
+//					mui('#Img')[0].appendChild(img);
+					plus.io.resolveLocalFileSystemURL( p, function ( entry ) {
+//						createItem( entry );
+					}, function ( e ) {
+						mui.toast( "读取拍照文件错误："+e.message );
+					} );
+				}, function ( e ) {
+					mui.toast( "失败："+e.message );
+				}, {filename:"_doc/camera/",index:1} );
+			}
+			
+			
+			
+			
+			
+		</script>
+	</body>
+
+</html>
